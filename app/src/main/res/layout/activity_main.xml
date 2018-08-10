@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="100"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_x="71dp"
+        android:layout_y="28dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="23dp" />
+
+        <Switch
+            android:id="@+id/OnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="131dp"
+            android:layout_y="29dp"
+            android:state_checked="false"
+            tools:layout_editor_absoluteX="145dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bsb_bubble_color="#56baac"
+            app:bsb_bubble_text_color="@color/colorPrimaryDark"
+            app:bsb_max="32"
+            app:bsb_min="16"
+            app:bsb_progress="0"
+            app:bsb_section_count="5"
+            app:bsb_section_text_position="bottom_sides"
+            app:bsb_show_progress_in_float="false"
+            app:bsb_show_section_mark="true"
+            app:bsb_show_section_text="true"
+            app:bsb_show_thumb_text="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/fanGroup"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/fan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fan1"
+                android:checked="false"/>
+
+            <RadioButton
+                android:id="@+id/fan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fan2"/>
+
+            <RadioButton
+                android:id="@+id/fan3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fan3"
+                android:checked="false"/>
+
+            <RadioButton
+                android:id="@+id/fan4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fan4"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="133dp"
+            android:layout_y="201dp"
+            android:text="Set Fan"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="192dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
